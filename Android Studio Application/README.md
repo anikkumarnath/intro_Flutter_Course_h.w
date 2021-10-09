@@ -1,4 +1,4 @@
-# second_day
+# Flutter Application on Android Studio
 
 A new Flutter project.
 
