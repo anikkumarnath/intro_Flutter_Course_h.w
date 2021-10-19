@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:second_day/editpage.dart';
+import 'package:second_day/post_page.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -111,7 +112,7 @@ class _ProfilePageState extends State<ProfilePage> {
                               Padding(
                                 padding: const EdgeInsets.only(right: 77),
                                 child: Text(
-                                  'Sheikh Hasina',
+                                  'Anik Kumar Nath',
                                   style: TextStyle(
                                     fontStyle: FontStyle.normal,
                                     fontSize: 25,
@@ -122,7 +123,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                 ),
                               ),
                               Text(
-                                'National Parliament House,Sher-e-Bangla Nagar, Dhaka',
+                                'Trainee of Android Game development project',
                                 style: TextStyle(
                                   fontSize: 16,
                                   fontWeight: FontWeight.w600,
@@ -186,11 +187,10 @@ class _ProfilePageState extends State<ProfilePage> {
                           width: MediaQuery.of(context).size.width,
                           padding: EdgeInsets.symmetric(horizontal: 15,),
                           child: Text(
-                            "Sheikh Hasina, also "
-                                "known by her married name Sheikh Hasina Wazed, "
-                                "is a Bangladeshi politician who has been serving as "
-                                "the Prime Minister of Bangladesh since January 2009. "
-                                "She previously served as prime minister from June 1996 to July 2001",
+                            "Anik Kumar Nath, "
+                                "one of the trainees of Android Game development Training. "
+                                "This training center locates at Sat raster more, Khulna."
+                                "He lives in Boikali, Khalishpur, Khulna.",
                             style: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.w500,
@@ -215,34 +215,41 @@ class _ProfilePageState extends State<ProfilePage> {
                         alignment: WrapAlignment.spaceEvenly,
                         crossAxisAlignment: WrapCrossAlignment.center,
                         children: [
-                          Container(
-                            height: MediaQuery.of(context).size.height/15,
-                            width: MediaQuery.of(context).size.width/4.2,
-                            decoration: BoxDecoration(
-                              border: Border.all(
-                                  color: Color.fromRGBO(31, 31, 31, 1),
-                                  width: 3,
-                                  style: BorderStyle.solid
-                              ),
-                              color: Color.fromRGBO(245, 245, 245, 0.5),
-                            ),
-                            child: FlatButton.icon(
-                              onPressed: (){},
-                              icon: Icon(
-                                CupertinoIcons.plus_square_on_square,
-                                size: 12,
-                                color: Color.fromRGBO(21, 21, 21, 1),
-                              ),
-                              label: Text(
-                                "Posts",
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w700,
-                                  color: Color.fromRGBO(21, 21, 21, 1),
-                                ),
-                              ),
-                            ),
+                      Container(
+                      height: MediaQuery.of(context).size.height/15,
+                    width: MediaQuery.of(context).size.width/4.2,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                          color: Color.fromRGBO(31, 31, 31, 1),
+                          width: 3,
+                          style: BorderStyle.solid
+                      ),
+                      color: Color.fromRGBO(245, 245, 245, 0.5),
+                    ),
+                    child: FlatButton.icon(
+                      onPressed: (){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context)=>PostPage(),
                           ),
+                        );
+                      },
+                      icon: Icon(
+                        CupertinoIcons.plus_square_on_square,
+                        size: 12,
+                        color: Color.fromRGBO(21, 21, 21, 1),
+                      ),
+                      label: Text(
+                        "Posts",
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w700,
+                          color: Color.fromRGBO(21, 21, 21, 1),
+                        ),
+                      ),
+                    ),
+                  ),
 
                           //Messanger container button
                           Container(
